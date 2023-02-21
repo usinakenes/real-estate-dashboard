@@ -12,11 +12,11 @@ import {
 
 const Home = () => {
   return (
-    <Box>
+    <Box width='100%' display='flex' flexDirection='column' justifyContent='center'>
       <Typography fontSize={25} fontWeight={500} color="#11142d"> 
         Dashboard
       </Typography>
-      <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
+      <Box mt="20px" display="flex" flexWrap="wrap" gap={2}>
         <PieChart 
           title="Properties for Sale"
           value={684}

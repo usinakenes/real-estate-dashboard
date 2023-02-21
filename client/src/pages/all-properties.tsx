@@ -41,12 +41,12 @@ const AllProperties = () => {
   if(isError) return <Typography>Error...</Typography>
 
   return (
-    <Box>
-      <Box mt='20px' sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
-        <Stack direction='column' width='100%'>
+    <Box display='flex' flexDirection='column' alignItems='center'>
+      <Box mt='20px' width='100%' sx={{ display: 'flex', gap: 3 }}>
+        <Stack direction='column' alignItems='center' width='100%' >
           <Typography fontSize={25} fontWeight={500} color='#11142d'>{!allProperties.length ? 'There are no properties' : 'All Properties'}</Typography>
-          <Box mb={2} mt={3} display="flex" width='84%' justifyContent='space-between' flexWrap='wrap'>
-            <Box display='flex' gap={2} flexWrap='wrap' mb={{ xs: '20px', sm: 0 }}>
+          <Box mb={2} mt={3} display="flex" width='84%' justifyContent='center' flexWrap='wrap'>
+            <Box display='flex' justifyContent='center' gap={2} flexWrap='wrap' mb={{ xs: '20px', sm: 0 }}>
               <CustomButton 
                 title={`Sort price ${currentPrice === 'asc' ? '↑' : '↓'}`}
                 handleClick={() => toggleSort('price')}
@@ -109,7 +109,7 @@ const AllProperties = () => {
         />
       </Stack>
 
-      <Box mt='20px' sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+      <Box mt='20px' sx={{ display: 'flex', flexWrap: 'wrap', justifyContent:'center', gap: 3 }}>
         {allProperties.map((property) => (
           <PropertyCard
             key={property._id}

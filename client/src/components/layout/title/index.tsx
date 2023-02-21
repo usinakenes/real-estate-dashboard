@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouterContext, TitleProps } from "@pankod/refine-core";
-import { Button } from "@pankod/refine-mui";
+import { Box, Button, textTransform, Typography } from "@pankod/refine-mui";
 import { logo, yariga } from 'assets'
 
 export const Title: React.FC<TitleProps> = ({ collapsed }) => {
@@ -12,7 +12,10 @@ export const Title: React.FC<TitleProps> = ({ collapsed }) => {
         {collapsed ? (
           <img src={logo} alt="Refine" width="28px" />
         ) : (
-          <img src={yariga} alt="Refine" width="140px" />
+          <Box display='flex' >
+            <img src={logo} alt="Refine" width="28px" />
+            <Typography fontSize={28} fontWeight={500} ml={1} sx={{textDecoration: 'none', color: '#11142d', textTransform: 'capitalize'}}>Sina</Typography>
+          </Box>
         )}
       </Link>
     </Button>
